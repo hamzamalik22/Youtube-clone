@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <link rel="icon" type="image/x-icon" href="youtube.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-black text-white  font-[Roboto]">
+    <nav class="flex justify-between items-center px-2 py-4 lg:px-4">
+        <div class="left flex justify-between gap-3 lg:gap-5 items-center">
+            <i id="menu" class="ri-menu-fill text-2xl cursor-pointer"></i>
+            <div class="logo gap-1 flex items-center">
+                <i
+                    class="ri-youtube-fill text-2xl sm:text-3xl sm:font-bold lg:text-4xl lg:font-bold  text-rose-600"></i><span
+                    class="max-[340px]:hidden lg:text-2xl lg:font-bold">Youtube</span>
+            </div>
+        </div>
+        <div class="center flex items-center gap-2 lg:gap-5 ">
+            <div class="searchbox rounded-full bg-black pr-3 border-2">
+                <input class="bg-gray-500 w-16 sm:w-48 md:w-56 lg:w-96 py-2 px-2 rounded-l-full" type="text"
+                    placeholder="Search">
+                <i class="ri-search-line pl-1"></i>
+            </div>
+            <div class="mic">
+                <i class="ri-mic-fill bg-gray-500 text-xl font-thin py-2 px-2 rounded-full"></i>
+            </div>
+        </div>
+        <div class="right sm:flex lg:gap-5 sm:gap-3 hidden ">
+            <i class="ri-video-add-line text-xl lg:text-2xl sm:text-1xl"></i>
+            <i class="ri-notification-3-line text-xl lg:text-2xl sm:text-1xl"></i>
+            <i class="ri-user-fill text-xl lg:text-2xl sm:text-1xl"></i>
+        </div>
+        <div class="right2 sm:hidden">
+            <i class="ri-arrow-down-circle-line text-4xl cursor-pointer" id="arrow_down"></i>
+            <ul class="absolute hidden right-2 bg-gray-700 mt-2 py-4 px-2 rounded-full" id="down_arrow_menu">
+                <li class="pb-1"><i class="ri-video-add-line text-xl lg:text-2xl sm:text-1xl"></i></li>
+                <li class="py-1"><i class="ri-notification-3-line text-xl lg:text-2xl sm:text-1xl"></i></li>
+                <li class="pt-1"><i class="ri-user-fill text-xl lg:text-2xl sm:text-1xl"></i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="nav2"
+        class="nav2 absolute w-1/2 lg:1/6 sm:w-1/4 h-full bg-gray-900 transform transition-transform duration-500 ease-in-out -translate-x-96 z-30 max-[340px]:w-full">
+        <ul class="flex flex-col items-center justify-center text-lg py-3">
+            <li><i class="ri-home-4-line relative right-14"></i><a>Home</a></li>
+            <li><i class="ri-mv-fill relative right-14"></i><a>Shorts</a></li>
+            <li><i class="ri-movie-line relative right-8"></i><a>Subscription</a></li>
+        </ul>
+        <hr>
+        <h3 class="text-center py-2">You <a href="#"><i class="ri-arrow-right-s-line"></i></a></h3>
+
+        <ul class="flex flex-col items-center justify-center">
+            <li class="py-2"><a href="#">Your Channel</a></li>
+            <li class="py-2"><a href="#">History</a></li>
+            <li class="py-2"><a href="#">Playlists</a></li>
+            <li class="py-2"><a href="#">Your videos</a></li>
+            <li class="py-2"><a href="#">Watch Later</a></li>
+            <li class="py-2"><a href="#">Liked videos</a></li>
+        </ul>
+
+    </div>
+
+    <div class="list flex items-center justify-between px-3 my-4">
+        <div class="left_arrow">
+            <i class="ri-arrow-left-s-line"></i>
+        </div>
+        <div class="list_items overflow-hidden">
+            <ul class="flex gap-3 items-center justify-between overflow-hidden">
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">All</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Music</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">News</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Live</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Source Code</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Gaming</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Python</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">JavaScript</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Masha and the Bear</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Tom and Jerry</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Paksitani dramas</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Dr. Israr Ahmad</li>
+                <li class="bg-gray-500 py-1 px-3 rounded-lg flex-shrink-0">Nasheeds</li>
+
+            </ul>
+        </div>
+        <div class="right_arrow">
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+    </div>
+
+    <section class="videos sm:flex sm:gap-3 sm:items-center sm:justify-center sm:flex-wrap sm:px-4">
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/iLRxVouH1EQ/mqdefault_6s.webp?du=3000&sqp=CLig27IG&rs=AOn4CLDRWvHZCrG3nK01fuoPYsa0wuxdLA"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/0pLQyz98kOoxqe0Bp4rlDEVYTTt2cD4_HPkwzYXYW8Ih8YT4MAh7VnwLmB9UbP_myaF-0EkE=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">Virus Showdown | Good Habits | Funny Cartoons for Kids | Sheriff Labrador
+                    </p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-5">Sheriff Labrador - kids Cartoon</p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-5">241k views • 1 day ago</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/fshrGZ6OJbs/mqdefault_6s.webp?du=3000&sqp=CMKS3LIG&rs=AOn4CLDO1RfQO01-jHc2V7kLQK6Jd_B2xQ"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/0pLQyz98kOoxqe0Bp4rlDEVYTTt2cD4_HPkwzYXYW8Ih8YT4MAh7VnwLmB9UbP_myaF-0EkE=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">
+                        Old Fashioned Fuse! | 2 HOUR Compilation | BEST of Oddbods March</p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-8">Oddbods kids show</p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-8">2.4M views • 1 month ago</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/wdf-tcPI7eU/mqdefault_6s.webp?du=3000&sqp=CJH-27IG&rs=AOn4CLD4ooupsE6fk4oj-3U_qPpWKa23VA"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/pDIpPkkKy7D8z7N5WIpmErscZiJR3waXurZUy1fjHeT09oJswtAlyE5TbxIdwvGA-VqyDa7uTUo=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">🐻🐹🐻🐹 | Grizzy & the lemmings | 25' compilation 🐻🐹 Cartoon for Kids</p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-10">Grizzy & les Lemmings
+                    </p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-10">2.9M views • 5 days ago</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/iLRxVouH1EQ/mqdefault_6s.webp?du=3000&sqp=CLig27IG&rs=AOn4CLDRWvHZCrG3nK01fuoPYsa0wuxdLA"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/0pLQyz98kOoxqe0Bp4rlDEVYTTt2cD4_HPkwzYXYW8Ih8YT4MAh7VnwLmB9UbP_myaF-0EkE=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">Virus Showdown | Good Habits | Funny Cartoons for Kids | Sheriff Labrador
+                    </p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-5">Sheriff Labrador - kids Cartoon</p>
+                </div>
+                <div class="views">
+                    <p class="text-xs relative right-5">241k views • 1 day ago</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/fshrGZ6OJbs/mqdefault_6s.webp?du=3000&sqp=CMKS3LIG&rs=AOn4CLDO1RfQO01-jHc2V7kLQK6Jd_B2xQ"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/0pLQyz98kOoxqe0Bp4rlDEVYTTt2cD4_HPkwzYXYW8Ih8YT4MAh7VnwLmB9UbP_myaF-0EkE=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">
+                        Old Fashioned Fuse! | 2 HOUR Compilation | BEST of Oddbods March</p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-8">Oddbods kids show</p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-8">2.4M views • 1 month ago</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/wdf-tcPI7eU/mqdefault_6s.webp?du=3000&sqp=CJH-27IG&rs=AOn4CLD4ooupsE6fk4oj-3U_qPpWKa23VA"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/pDIpPkkKy7D8z7N5WIpmErscZiJR3waXurZUy1fjHeT09oJswtAlyE5TbxIdwvGA-VqyDa7uTUo=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">🐻🐹🐻🐹 | Grizzy & the lemmings | 25' compilation 🐻🐹 Cartoon for Kids</p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-10">Grizzy & les Lemmings
+                    </p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-10">2.9M views • 5 days ago</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/TzI4XHqQwdk/mqdefault_6s.webp?du=3000&sqp=COXc3LIG&rs=AOn4CLCFP-Udj5nBCrJli11jLxXJiZElLg"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/sivMN2Tv84NATz-xWjVCLIuUZMonsz_PRRqt7MHY-bIVC36q-6s_vZvVGWAMl311wF_qdI0lIg=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">مراقبة الطّيور | بليبي بالعربي | برنامج بليبي التعليمي | Blippi Arabic Goes
+                        Birdwatching 🦜
+                    </p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-4">Blippi Arabic - برنامج بلبي كرتون اطفال
+                    </p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-4"> 613 views • 3 hours ago </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/Q87XHPX9W_8/mqdefault_6s.webp?du=3000&sqp=COyN3bIG&rs=AOn4CLAUkbC22Xbipoit6h_EEK52IA7gkg"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/ytc/AIdro_myo7DpWNMo1OW07UeoX176F3Aemf_gLyJ_6NpmTUcyjw=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">
+                        💥 SUPER POCOYO - The Adventures of Pocoyo + Pato! | Pocoyo English
+                    </p>
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-2">
+                        Pocoyo English - Complete Episodes
+                    </p>
+                </div>
+                <div class="views">
+                    <p class="text-xs  relative right-2">20K views • 11 days ago</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video flex flex-col  items-center py-4">
+            <div class="thumbnail">
+                <img src="https://i.ytimg.com/an_webp/N16xwVEzpY8/mqdefault_6s.webp?du=3000&sqp=CKqA3bIG&rs=AOn4CLAWJGYVRfZi57pUg3zZXHWblp1Aqw"
+                    alt="">
+            </div>
+            <div class="title_pane mt-2 flex w-80 px-3 items-center justify-center">
+                <div class="icon rounded-full">
+                    <img class="rounded-full"
+                        src="https://yt3.ggpht.com/kmSpY1JjqeCotYjuPXYTwGSkMKBFgpQ_TBiKnMrlYCoOCmdFHhcIdbp-i8XFGo1e2qv9d_hPSQ=s68-c-k-c0x00ffffff-no-rj"
+                        alt="">
+                </div>
+                <div class="title">
+                    <p class="text-sm px-2">Non Stop Motu - Patlu | मोटू पतलू | #motupatlu #motupatlukijodi
+                </div>
+            </div>
+            <div class="details_pane flex flex-col mt-1 mb-2">
+                <div class="channel_name self-start">
+                    <p class="text-xs relative right-8"> Sonic Gang
+                    </p>
+                </div>
+                <div class="views">
+                    <p class="text-xs relative right-8">5M views • 3 weeks ago</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
