@@ -107,7 +107,7 @@ videoData.forEach((video) => {
   </div>
   <div class="title_pane mt-4 flex w-80 px-3 items-center">
       <div class="icon rounded-full">
-          <img class="rounded-full w-12 h-12" src="${video.icon}" alt="">
+          <img class="rounded-full w-14 h-12" src="${video.icon}" alt="">
       </div>
       <div class="title">
           <p class="text-sm px-2 break-words">${video.title.slice(0, 50)}</p>
